@@ -6,3 +6,6 @@ __pycache__/
 *.egg-info
 .venv
 .aider*
+/.aider.chat.history.md
+/.aider.input.history
+/.aider.tags.cache.v4
