@@ -7,6 +7,16 @@ from .track import Track
     description="A curated collection of tracks designed for a specific activity or mood."
 )
 class Playlist:
+    """Represents a Spotify playlist with tracks and metadata.
+    
+    Attributes:
+        id: Unique Spotify ID for the playlist.
+        name: Name of the playlist.
+        description: Description of the playlist's content or purpose.
+        
+    Methods:
+        tracks: Fetches and returns the list of tracks in the playlist.
+    """
     id: strawberry.ID = strawberry.field(description="The ID for the playlist.")
     name: str = strawberry.field(description="The name of the playlist.")
     description: str | None = strawberry.field(
