@@ -10,6 +10,10 @@ from .types.playlist import Playlist
 
 @strawberry.type
 class Mutation:
+    """Root GraphQL mutation type for Spotify API operations.
+    
+    Provides write operations for modifying Spotify playlist data.
+    """
     @strawberry.mutation(description="Add one or more items to a user's playlist.")
     async def add_items_to_playlist(
         self, info: strawberry.Info, input: AddItemsToPlaylistInput

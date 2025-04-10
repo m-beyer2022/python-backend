@@ -7,6 +7,10 @@ from .types.track import Track
 
 @strawberry.type
 class Query:
+    """Root GraphQL query type for Spotify API operations.
+    
+    Provides read-only access to Spotify playlist and track data.
+    """
     @strawberry.field(description="Playlists hand-picked to be featured to all users.")
     async def featured_playlists(self, info: strawberry.Info) -> list[Playlist]:
         spotify_client = info.context["spotify_client"]
